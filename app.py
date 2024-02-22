@@ -1,5 +1,4 @@
 from flask import Flask,request,render_template
-import replicate
 import os
 import time
 from openai import OpenAI
@@ -7,7 +6,6 @@ from openai import OpenAI
 
 
 app = Flask(__name__)
-os.environ["REPLICATE_API_TOKEN"]="r8_PjPBUKDL0x7UTopCGSertBXdPr1PGNn221Xeb"
 
 openai_api_key = os.getenv["OPENAI_API_TOKEN"]
 model = OpenAI(api_key=openai_api_key)
