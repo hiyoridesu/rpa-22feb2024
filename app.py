@@ -1,3 +1,7 @@
+import sys
+print(sys.getdefaultencoding())  ->utf-8
+
+
 from flask import Flask,request,render_template
 import os
 import time
