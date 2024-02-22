@@ -7,7 +7,7 @@ from openai import OpenAI
 
 app = Flask(__name__)
 
-openai_api_key = os.getenv["OPENAI_API_TOKEN"]
+openai_api_key = os.getenv("OPENAI_API_KEY")
 model = OpenAI(api_key=openai_api_key)
 
 
