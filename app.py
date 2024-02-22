@@ -22,33 +22,13 @@ def index():
 
 #main
 @app.route("/main",methods=["GET","POST"])
-def mian():
+def main():
   global r,first_time
   if first_time == 1:
     r=request.form.get()
   return (render_template("main.html",r = r))
 
 
-"""
-#image_gpt
-@app.route("/image_gpt",methods=["GET","POST"])
-def image_gpt():
-  return(render_template("/image_gpt.html"))
-
-
-#image_result
-@app.route("/image_result",methods=["GET","POST"])
-def image_result():
-  q = request.form.get("q")
-  r = replicate.run(
-   "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
-
-    input={"prompt": inputs,}
-  )
-  time.sleep(10)
-  return(render_template("image_gpt.html",r = r[0]))
-  print(r)
-"""
   
 
 #text_gpt
